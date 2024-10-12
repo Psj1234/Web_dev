@@ -4,10 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Selectors</title>
+    <style>
+        /* Element selector*/
+        div{
+            background-color: aqua;
+        }
+        /*class selector*/
+        .red{
+            background-color: red;
+        }
+        /*id selector*/
+        #green{
+            background-color: green;
+        }
+        /*Child Selector*/
+        /*Applicable on direct child only*/
+        div>p{
+            color: blue;
+            background-color: chartreuse;
+        }
+        /*Descendent Selector*/
+        div p{
+            background-color: brown;
+        }
+        /*Universal Selector*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*Pseudo Selectors*/
+        a:visited{
+            color: black;
+        }
+        a:link{
+            color: chocolate;
+        }
+        a:hover{
+            background-color: blue;
+        }
+        a:active{
+            background-color: aquamarine;
+        }
+        p:first-child{
+            color: blueviolet;
+        }
+
+    </style>
 </head>
 <body>
     <div>
-        
+        I am a div
+        <p>This paragraph is written inside div</p>
+        <article>
+            <!--This is also first child-->
+            <p>
+                This is paragraph inside div and article
+            </p>
+        </article>
     </div>
+    <div>
+        I am another div
+    </div>
+    <div class="red">
+        I am div of class red
+    </div>
+    <p id="green">I am a paragraph</p>
+    <a href="https://www.google.com">Google</a>
 </body>
 </html>
